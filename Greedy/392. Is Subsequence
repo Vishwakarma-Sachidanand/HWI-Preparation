@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        if(s.isEmpty()){
+            return true;
+        }
+        int idx = 0 ;
+        for(final char c : t.toCharArray()){
+            if(s.charAt(idx) == c ){
+                idx++;
+                if(idx == s.length()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
